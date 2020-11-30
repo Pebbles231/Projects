@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Wrapper for the main content*/
+.content-wrapper {
+  max-width: 80%;
+  margin: auto;
+}
+
+/* These is the styling for the keyboard*/
+.keyboard {
+  margin: auto;
+  height: 330px;
+  width: 825px;
+  font-family: Helvetica, sans-serif;
+}
+
+.keyboard-row-fn {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  width: 100%;
+  align-items: center;
+}
+.keyboard-row {
+  display: flex;
+  justify-content: space-between;
+  height: 58px;
+  width: 100%;
+  align-items: center;
+}
+.keyboard-row-last {
+  display: flex;
+  align-items: flex-end;
+  height: 53px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.key {
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 3px;
+}
+
+.fn-button {
+  height: 24px;
+  width: 52px;
+}
+
+.key-normal {
+  height: 46px;
+  width: 46px;
+}
+
+.key-special {
+  height: 46px;
+}
+
+.key-delete {
+  width: 70px;
+}
+
+.key-tab{
+  width: 70px;
+}
+
+.key-capslock,
+.key-return {
+  width: 80px;
+}
+
+.key-shift {
+  width: 100px;
+}
+
+.key-cmd {
+  width: 60px;
+}
+
+.key-space {
+  width: 250px;
+}
+.not-pressed {
+  box-shadow: -2px 2px 1px 3px rgba(30,30,30,0.8);
+}
+/* --- needs to stay below not-pressed class ---- */
+.key-pressed {
+  box-shadow: -1px 1px 1px 1px rgba(30,30,30,0.8);
+}
+/* --- needs to stay below not-pressed class ---- */
+
+.button-wrapper {
+  display: block;
+  width: 50px;
+}
+
+#start-button {
+  display: block;
+}
+
+.excersise-section {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+#excersise {
+  display: inline-block;
+  width: 70%;
+}
+
+#practice-area {
+  width: 100%;
+  height: 2rem;
+  background-color: #999;
+  border-radius: 7px;
+  padding: 5px;
+  font-size: 1rem;
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+}
+
+#textInput {
+  display: block;
+  background-color: transparent;
+  width: 100%;
+  font-size: 1rem;
+  font-family: Helvetica, sans-serif;
+  margin: auto;
+  border: 2px solid #A1922E;
+  outline: none;
+  height: 2rem;
+  resize: none;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+#results {
+  display: inline-block;
+  width: 10%;
+  text-align: left;
+}
+
+.correct{
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+/* --- styling for the practice box---*/
