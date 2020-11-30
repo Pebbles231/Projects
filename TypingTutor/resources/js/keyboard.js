@@ -107,10 +107,10 @@ inputField.addEventListener('input', () => {
         excersiseSpan.classList.add('correct')
         excersiseSpan.classList.remove('incorrect')
     } else {
-        excersiseSpan.classList.remove('correct');
-        excersiseSpan.classList.add('incorrect');
         incorrectCounter++;
         incorrectElement.innerText = incorrectCounter;
+        excersiseSpan.classList.remove('correct');
+        excersiseSpan.classList.add('incorrect');
     }
   });
   if ($(excersiseArea).children().length === $('.correct').length) {

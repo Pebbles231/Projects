@@ -119,25 +119,27 @@
 
 #practice-area {
   width: 100%;
-  height: 2rem;
+  min-height: 3rem;
   background-color: #999;
   border-radius: 7px;
   padding: 5px;
   font-size: 1rem;
   font-family: Helvetica, sans-serif;
   text-align: left;
+  line-height: 1.3;
 }
 
 #textInput {
   display: block;
   background-color: transparent;
+  min-height: 2rem;
   width: 100%;
   font-size: 1rem;
+  line-height: 1.3;
   font-family: Helvetica, sans-serif;
   margin: auto;
   border: 2px solid #A1922E;
   outline: none;
-  height: 2rem;
   resize: none;
   border-radius: 7px;
   padding: 5px;
