@@ -3,6 +3,7 @@ const excersiseArea = document.getElementById('practice-area');
 const startButton = document.getElementById('start-button');
 const inputField = document.getElementById('textInput')
 const timerElement = document.getElementById('timer')
+const incorrectElement = document.getElementById('incorrect-counter')
 //-----
 //keyboard start
 
@@ -44,7 +45,7 @@ const arrayStep1 = ["a", "s", "d", "f", "g"];
 //function to create the arrays
 function createExcersiseArray(arr) {
   let array = []
-  for (let i = 1; i < 55; i++) {
+  for (let i = 1; i < 110; i++) {
     if (i % (Math.floor(Math.random() * 5)+2) == 0) {
       array.push(' ')
     }
@@ -57,6 +58,8 @@ let startTime
 //defining myTimer var outside of the function, so that other functions can
 //to stop the timer
 var myTimer
+//set the incorrectcounter back to 0 when the start/restart button isclick
+let incorrectCounter;
 //start button to start the excersise
 startButton.addEventListener('click', () => {
   startButton.textContent = 'Restart';
@@ -84,6 +87,8 @@ startButton.addEventListener('click', () => {
   // and starts the timer
   startTime = new Date()
   myTimer = setInterval(startTimer, 1000)
+  incorrectCounter = 0;
+  incorrectElement.innerText = incorrectCounter;
 });
 
 //This is the input field below the excersise, which takes the user input and
@@ -93,7 +98,6 @@ startButton.addEventListener('click', () => {
 inputField.addEventListener('input', () => {
   const arrayInput = excersiseArea.querySelectorAll('span');
   const arrayValue = textInput.value.split('');
-  let incorrectCounter = 0;
   arrayInput.forEach((excersiseSpan, index) => {
   const excersiseChar = arrayValue[index];
   if (excersiseChar == null) {
@@ -106,6 +110,7 @@ inputField.addEventListener('input', () => {
         excersiseSpan.classList.remove('correct');
         excersiseSpan.classList.add('incorrect');
         incorrectCounter++;
+        incorrectElement.innerText = incorrectCounter;
     }
   });
   if ($(excersiseArea).children().length === $('.correct').length) {
