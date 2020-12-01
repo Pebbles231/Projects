@@ -4,6 +4,8 @@ const startButton = document.getElementById('start-button');
 const inputField = document.getElementById('textInput')
 const timerElement = document.getElementById('timer')
 const incorrectElement = document.getElementById('incorrect-counter')
+var path = window.location.pathname;
+var page = path.split("/").pop();
 //-----
 //keyboard start
 
@@ -19,6 +21,7 @@ $(document).keydown(function(event) {
   keyboardValue.forEach((item) => {
       if (keyCode == item.dataset.key){
         $(item).addClass("key-pressed");
+        console.log(page)
       }
   });
 });
@@ -41,6 +44,41 @@ $(document).keyup(function(event) {
 //start of the Excersise
 //setting up the arrays that are used to create the excerises of each step
 const arrayStep1 = ["a", "s", "d", "f", "g"];
+
+
+//define which array is going to be used based on the filename
+switch(page) {
+  case "step1.html":
+    inputArray = arrayStep1;
+    break;
+  case "step2.html":
+    inputArray = arrayStep2;
+    break; 
+  case "step3.html":
+    inputArray = arrayStep3;
+    break;
+  case "step4.html":
+    inputArray = arrayStep4;
+    break;
+  case "step5.html":
+    inputArray = arrayStep5;
+    break;
+  case "step6.html":
+    inputArray = arrayStep6;
+    break;
+  case "step7.html":
+    inputArray = arrayStep7;
+    break;
+  case "step8.html":
+    inputArray = arrayStep8;
+    break;
+  case "step9.html":
+    inputArray = arrayStep9;
+    break;
+  case "step10.html":
+    inputArray = arrayStep10;
+    break;
+}
 
 //function to create the arrays
 function createExcersiseArray(arr) {
