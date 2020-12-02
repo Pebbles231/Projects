@@ -45,8 +45,8 @@ $(document).keyup(function(event) {
 //setting up the arrays that are used to create the excerises of each step
 const arrayStep1 = ["a", "s", "d", "f", "g"];
 const arrayStep2 = ["h", "j", "k", "l", ";"];
-const arrayStep3 = [];
-const arrayStep4 = [];
+const arrayStep3 = ["a", "s", "d", "f", "g", "A", "S", "D", "F", "G"];
+const arrayStep4 = ["h", "j", "k", "l", ";", "H", "J", "K", "L", ":"];
 const arrayStep5 = [];
 const arrayStep6 = [];
 const arrayStep7 = [];
