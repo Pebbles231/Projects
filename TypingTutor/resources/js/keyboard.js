@@ -44,7 +44,15 @@ $(document).keyup(function(event) {
 //start of the Excersise
 //setting up the arrays that are used to create the excerises of each step
 const arrayStep1 = ["a", "s", "d", "f", "g"];
-
+const arrayStep2 = ["h", "j", "k", "l", ";"];
+const arrayStep3 = [];
+const arrayStep4 = [];
+const arrayStep5 = [];
+const arrayStep6 = [];
+const arrayStep7 = [];
+const arrayStep8 = [];
+const arrayStep9 = [];
+const arrayStep10 = [];
 
 //define which array is going to be used based on the filename
 switch(page) {
